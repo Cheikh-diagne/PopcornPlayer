@@ -5,6 +5,7 @@ import HomePage from './components/pages/HomePage';
 import FilmCategoriesPage from './components/pages/FilmsCategoriesPage';
 import FilmPage from './components/pages/FilmPage';
 import SearchPage from './components/pages/SearchPage';
+import Navbar from "./components/navBar";
 
 function App() {
   return (
@@ -20,4 +21,12 @@ function App() {
   );
 }
 
+const navigation = {
+    brand: { name : "Navbar", to: "/"},
+    links: [
+        { name : "Accueil", to: "/" },
+        { name : "Catégories", to: "/categories"},
+        { name : "Films", to: "/movies/:id"}
+    ]
+}
 export default App
