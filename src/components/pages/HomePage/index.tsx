@@ -1,14 +1,47 @@
-import { Box, Typography } from '@mui/material';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import BasicPagination from '../../BasicPagination';
+import MoviesList from '../../MoviesList';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+
+type Movies = {
+  page: number;
+  results: Array<any>;
+  total_pages: number;
+  total_results: number;
+}
 
 const HomePage = () => {
-  const apiUrl = process.env.REACT_APP_TMDB_API;
-  const apiKey = process.env.REACT_APP_TMDB_API_APIKEY;
+  const [movies, setMovies] = useState<Movies | null>(null);
+  const [page, setPage] = useState(1);
+
+  const handlePage = (page:number) => {
+    setPage(page);
+  }
+
+  useEffect(() => {
+    const apiUrl = process.env.REACT_APP_TMDB_API;
+    const apiKey = process.env.REACT_APP_TMDB_API_APIKEY;
+    axios.get(`${apiUrl}/discover/movie?api_key=${apiKey}&page=${page}`)
+    .then((res) => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      setMovies(res.data)
+      console.log(res.data)
+    })
+  }, [page])
+
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <Typography>
-        Home Page {apiUrl} {apiKey}
-      </Typography>
-    </Box>
+    <>
+    <CssBaseline/>
+    <Container>
+      <MoviesList movies={movies}/>
+      <BasicPagination page={handlePage}/>
+    </Container>
+  </>
   );
 };
 
