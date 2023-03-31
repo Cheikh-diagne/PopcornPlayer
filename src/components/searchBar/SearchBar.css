@@ -1,0 +1,8 @@
+InputBase {
+    width: 100%;
+    height: 20%;
+}
+
+Button {
+    border-radius: 20px;
+}
