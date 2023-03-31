@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 
-const FilmCategoryPage = () => {
+const FilmCategoriesPage = () => {
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <Typography>
@@ -10,4 +10,4 @@ const FilmCategoryPage = () => {
   );
 };
 
-export default FilmCategoryPage;
+export default FilmCategoriesPage;
