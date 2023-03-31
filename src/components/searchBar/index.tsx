@@ -1,4 +1,4 @@
-import { Button, Divider, IconButton, InputBase, Paper } from "@mui/material";
+import { Button, InputBase, Paper } from "@mui/material";
 import './SearchBar.css';
 export default function SearchBar() {
     return(

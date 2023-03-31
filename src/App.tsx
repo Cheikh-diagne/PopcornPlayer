@@ -5,12 +5,15 @@ import HomePage from './components/pages/HomePage';
 import FilmCategoriesPage from './components/pages/FilmsCategoriesPage';
 import FilmPage from './components/pages/FilmPage';
 import SearchPage from './components/pages/SearchPage';
-import Navbar from "./components/navBar";
+import Banner from './components/Banner';
+import NavBar from './components/Navbar';
+// import Navbar from "./components/navBar";
 
 function App() {
     return (
             <Router>
-                <Navbar/>
+              <NavBar/>
+                <Banner/>
                 <Routes>
                     <Route path="/" element={<HomePage/>}/>
                     <Route path="/categories" element={<FilmCategoriesPage/>}/>

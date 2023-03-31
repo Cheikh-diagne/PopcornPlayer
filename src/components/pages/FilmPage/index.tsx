@@ -1,8 +1,8 @@
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import MovieDetails from '../../MovieDetails';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Routes, Route, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 interface Movie {
   adult: boolean
@@ -32,7 +32,7 @@ const FilmPage = () => {
             setMovie(res.data)
             console.log(res.data)
           })
-      }, [])
+      }, [id])
   
   if (movie === null) {
     return (<div>Loading...</div>)

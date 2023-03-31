@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from 'react';
 import { Box, Typography,  } from '@mui/material';
-import axios from 'axios';
-import { Routes, Route, useParams } from 'react-router-dom';
 
 interface Movie {
     adult: boolean
@@ -26,7 +23,7 @@ interface MovieCardProps {
   
 
 const MovieDetails = ({ movie }: MovieCardProps) => {
-    const { adult, backdrop_path, genre_ids, id, original_language, original_title, overview, popularity, poster_path, release_date, title, video, vote_average, vote_count } = movie;
+    const { backdrop_path, original_language, overview, release_date, title,  } = movie;
     console.log("sdfsdfs", movie)
 
   return (
