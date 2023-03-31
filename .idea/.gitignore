@@ -1,5 +1,12 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+<<<<<<< HEAD
+=======
+modules.xml
+PopcornPlayer.iml
+Project_Default.xml
+vcs.xml
+>>>>>>> 6b59c6f6dbc401c22d5f315615dc1471d2a8b6ac
 # Editor-based HTTP Client requests
 /httpRequests/
