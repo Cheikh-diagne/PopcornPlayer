@@ -1,0 +1,19 @@
+section {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    background-image: url('/public/fondBanner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 40%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
