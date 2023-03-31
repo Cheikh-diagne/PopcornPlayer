@@ -1,13 +1,13 @@
 import { Box, Typography } from '@mui/material';
 
-const NoPage = () => {
+const SearchPage = () => {
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <Typography>
-        Not found page works
+        Search Page
       </Typography>
     </Box>
   );
 };
 
-export default NoPage;
+export default SearchPage;
