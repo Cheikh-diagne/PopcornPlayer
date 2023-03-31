@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NoPage from './components/pages/NoPage';
 import HomePage from './components/pages/HomePage';
-import FilmCategoryPage from './components/pages/FilmsCategoryPage';
+import FilmCategoriesPage from './components/pages/FilmsCategoriesPage';
 import FilmPage from './components/pages/FilmPage';
 import SearchPage from './components/pages/SearchPage';
 
@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage/>} />
-          <Route path="/categories" element={<FilmCategoryPage/>} />
+          <Route path="/categories" element={<FilmCategoriesPage/>} />
           <Route path="/movies/:id" element={<FilmPage/>} />
           <Route path="/search/movies/:title" element={<SearchPage/>} />
           <Route path="*" element={<NoPage/>} />
